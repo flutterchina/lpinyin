@@ -14,7 +14,7 @@ doc/api/
 
 
 .gradle
-#.idea
+.idea
 *.iml
 build
 local.properties

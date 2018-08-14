@@ -1,5 +1,7 @@
 # lpinyin (汉字转拼音Flutter版)
 
+[![Pub](https://img.shields.io/pub/v/lpinyin.svg?style=flat-square)](https://pub.dartlang.org/packages/lpinyin)
+
 lpinyin是一个汉字转拼音的flutter package. 主要参考Java开源类库[jpinyin](https://github.com/SilenceDut/jpinyin).<br>
 ①准确、完善的字库<br>
 ②拼音转换速度快<br>
@@ -23,7 +25,7 @@ lpinyin是一个汉字转拼音的flutter package. 主要参考Java开源类库[
 
 ```yaml
 dependencies:
-  lpinyin: 0.0.1
+  lpinyin: 最新版本
 ```
 
 ### Example

@@ -1,5 +1,5 @@
 name: lpinyin
-description: A new Flutter Pinyin plugin.
+description: Chinese character conversion pinyin plugin.
 version: 0.0.2
 author: thl <863764940@qq.com>
 homepage: https://github.com/flutterchina/lpinyin

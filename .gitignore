@@ -19,3 +19,4 @@ doc/api/
 build
 local.properties
 
+example/android/app/src/main/java/io/

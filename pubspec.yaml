@@ -1,11 +1,11 @@
 name: lpinyin
-description: Chinese character conversion pinyin plugin.
-version: 0.0.2
+description: Chinese character conversion pinyin library.
+version: 1.0.0
 author: thl <863764940@qq.com>
 homepage: https://github.com/flutterchina/lpinyin
 
 environment:
-    sdk: ">=1.9.0 <3.0.0"
+    sdk: ">=1.19.0 <3.0.0"
 
 dependencies:
   flutter:

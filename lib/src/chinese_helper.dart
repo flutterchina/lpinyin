@@ -120,6 +120,7 @@ class ChineseHelper {
     return sb.toString();
   }
 
+  ///添加繁体字字典
   static void addChineseDict(List<String> list) {
     chineseMap.addAll(PinyinResource.getResource(list));
   }

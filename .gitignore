@@ -18,5 +18,3 @@ doc/api/
 *.iml
 build
 local.properties
-
-example/android/app/src/main/java/io/

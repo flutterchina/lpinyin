@@ -54,8 +54,8 @@ class _HomePageState extends State<HomePage> {
     switch (_convertType) {
       case TYPE_PINYIN:
         try {
-          _pinyinResult =
-              PinyinHelper.convertToPinyinString(text, format: _pinyinFormat);
+          _pinyinResult = PinyinHelper.convertToPinyinString(text,
+              separator: " ", format: _pinyinFormat);
         } catch (ex) {
           _pinyinResult = ex.toString();
         }

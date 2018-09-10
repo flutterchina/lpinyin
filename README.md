@@ -10,8 +10,12 @@ lpinyin是一个汉字转拼音的flutter package. 主要参考Java开源类库[
 ⑤简繁体中文转换<br>
 ⑥支持添加用户自定义字典
 
-##  Demo截图
+## Android扫码下载APK
+- 请使用手机浏览器扫码下载，不要使用微信或者qq扫码
+- <img src='https://github.com/Sky24n/lpinyin/blob/master/screenshot/qrcode.png'>
 
+##  Demo截图
+![image](https://github.com/Sky24n/lpinyin/blob/master/screenshot/2018-08-17_13_13_09.gif)
 <div>
 <img src="https://github.com/flutterchina/lpinyin/blob/master/screenshot/1.png" width="200">
 <img src="https://github.com/flutterchina/lpinyin/blob/master/screenshot/2.png" width="200">
@@ -25,7 +29,7 @@ lpinyin是一个汉字转拼音的flutter package. 主要参考Java开源类库[
 
 ```yaml
 dependencies:
-  lpinyin: 最新版本
+  lpinyin: x.x.x  #latest version
 ```
 
 ### Example

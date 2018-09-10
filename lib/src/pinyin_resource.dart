@@ -20,15 +20,5 @@ class PinyinResource {
         key: (item) => item.trim().split("=")[0],
         value: (item) => item.trim().split("=")[1]);
     return map;
-
-//    Map<String, String> _map = new HashMap();
-//    List<MapEntry<String, String>> mapEntryList = new List();
-//    list.forEach((value) {
-//      List<String> tokens = value.trim().split("=");
-//      MapEntry<String, String> mapEntry = new MapEntry(tokens[0], tokens[1]);
-//      mapEntryList.add(mapEntry);
-//    });
-//    _map.addEntries(mapEntryList);
-//    return _map;
   }
 }

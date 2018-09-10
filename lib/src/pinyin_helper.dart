@@ -91,7 +91,7 @@ class PinyinHelper {
         i += node.word.length;
       }
     }
-    return (sb.toString().endsWith(separator)
+    return ((sb.toString().endsWith(separator) && separator != "")
         ? sb.toString().substring(0, sb.toString().length - 1)
         : sb.toString());
   }
@@ -142,8 +142,8 @@ class PinyinHelper {
         i += node.word.length;
       }
     }
-    return (sb.toString().endsWith(separator)
-        ? sb.toString().substring(0, sb.toString().length - 1)
+    return ((sb.toString().endsWith(separator) && separator != "")
+        ? sb.toString().substring(0, sb.toString().length)
         : sb.toString());
   }
 
@@ -302,10 +302,12 @@ class PinyinHelper {
     return false;
   }
 
+  ///添加拼音字典
   static void addPinyinDict(List<String> list) {
     pinyinMap.addAll(PinyinResource.getResource(list));
   }
 
+  ///添加多音字字典
   static void addMultiPinyinDict(List<String> list) {
     multiPinyinMap.addAll(PinyinResource.getResource(list));
   }

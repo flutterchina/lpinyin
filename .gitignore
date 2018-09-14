@@ -12,9 +12,12 @@ pubspec.lock
 # If you don't generate documentation locally you can remove this line.
 doc/api/
 
-
 .gradle
 .idea
 *.iml
 build
 local.properties
+*/.idea/
+.idea/
+/.idea/workspace.xml
+/.idea/libraries

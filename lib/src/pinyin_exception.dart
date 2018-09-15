@@ -1,5 +1,5 @@
 class PinyinException implements Exception {
-  final message;
+  String message;
 
   PinyinException([this.message]);
 

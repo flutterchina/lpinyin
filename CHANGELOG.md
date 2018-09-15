@@ -9,3 +9,7 @@
 ## 1.0.0
 
 * TODO: fix "" separator bug.
+
+## 1.0.1
+
+* TODO: Optimize Pinyin conversion speed.

@@ -145,7 +145,7 @@ class PinyinHelper {
       }
     }
     return ((sb.toString().endsWith(separator) && separator != "")
-        ? sb.toString().substring(0, sb.toString().length)
+        ? sb.toString().substring(0, sb.toString().length - 1)
         : sb.toString());
   }
 

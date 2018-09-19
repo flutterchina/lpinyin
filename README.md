@@ -2,12 +2,12 @@
 
 [![Pub](https://img.shields.io/pub/v/lpinyin.svg?style=flat-square)](https://pub.dartlang.org/packages/lpinyin)
 
-lpinyin是一个汉字转拼音的flutter package. 主要参考Java开源类库[jpinyin](https://github.com/SilenceDut/jpinyin).<br>
-①准确、完善的字库<br>
-②拼音转换速度快<br>
-③支持多种拼音输出格式：带音标、不带音标、数字表示音标以及拼音首字母输出格式<br>
-④支持常见多音字的识别，其中包括词组、成语、地名等<br>
-⑤简繁体中文转换<br>
+lpinyin是一个汉字转拼音的flutter package. 主要参考Java开源类库[jpinyin](https://github.com/SilenceDut/jpinyin).  
+①准确、完善的字库  
+②拼音转换速度快  
+③支持多种拼音输出格式：带音标、不带音标、数字表示音标以及拼音首字母输出格式  
+④支持常见多音字的识别，其中包括词组、成语、地名等  
+⑤简繁体中文转换  
 ⑥支持添加用户自定义字典
 
 ## Android扫码下载APK

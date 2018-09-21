@@ -1,3 +1,7 @@
+## 1.0.6
+
+* TODO: Packages arrangement.
+
 ## 1.0.2
 
 * TODO: Delete useless files.

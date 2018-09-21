@@ -2,7 +2,7 @@
 
 [![Pub](https://img.shields.io/pub/v/lpinyin.svg?style=flat-square)](https://pub.dartlang.org/packages/lpinyin)
 
-lpinyin是一个汉字转拼音的Dart packages. 主要参考Java开源类库[jpinyin](https://github.com/SilenceDut/jpinyin).  
+lpinyin是一个汉字转拼音的Dart package. 主要参考Java开源类库[jpinyin](https://github.com/SilenceDut/jpinyin).  
 ①准确、完善的字库  
 ②拼音转换速度快  
 ③支持多种拼音输出格式：带音标、不带音标、数字表示音标以及拼音首字母输出格式  

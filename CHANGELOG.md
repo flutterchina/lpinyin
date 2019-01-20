@@ -1,6 +1,10 @@
+## 1.0.7
+
+* TODO: name change, convertToPinyinString -> getPinyin, convertToPinyinStringWithoutException -> getPinyinE. 
+
 ## 1.0.6
 
-* TODO: Packages arrangement.
+* TODO: Packages arrangement. 0
 
 ## 1.0.2
 

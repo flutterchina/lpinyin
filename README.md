@@ -41,12 +41,12 @@ PinyinHelper.getShortPinyin(str); // tfgc
 PinyinHelper.getFirstWordPinyin(str); // tian
 
 //无法转换拼音会 throw PinyinException
-PinyinHelper.convertToPinyinString(text);
-PinyinHelper.convertToPinyinString(text, separator: " ", format: PinyinFormat.WITHOUT_TONE);//tian fu guang chang
+PinyinHelper.getPinyin(text);
+PinyinHelper.getPinyin(text, separator: " ", format: PinyinFormat.WITHOUT_TONE);//tian fu guang chang
 
-//无法转换拼音 默认用'#'替代
-PinyinHelper.convertToPinyinStringWithoutException(text);
-PinyinHelper.convertToPinyinStringWithoutException(text, separator: " ", defPinyin: '#', format: PinyinFormat.WITHOUT_TONE);//tian fu guang chang
+//无法转换拼音 默认用' '替代
+PinyinHelper.getPinyinE(text);
+PinyinHelper.getPinyinE(text, separator: " ", defPinyin: '#', format: PinyinFormat.WITHOUT_TONE);//tian fu guang chang
 
 //添加用户自定义字典
 List<String> dict1 = ['耀=yào','老=lǎo'];

@@ -1,3 +1,4 @@
+/// Pinyin Exception.
 class PinyinException implements Exception {
   String message;
 

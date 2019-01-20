@@ -4,16 +4,23 @@ void main() {
   String str = "天府广场";
 
   //字符串拼音首字符
-  PinyinHelper.getShortPinyin(str); // tfgc
+  String shortpy = PinyinHelper.getShortPinyin(str); // tfgc
 
   //字符串首字拼音
-  PinyinHelper.getFirstWordPinyin(str); // tian
+  String firstWord = PinyinHelper.getFirstWordPinyin(str); // tian
 
-  PinyinHelper.convertToPinyinString(str); //tian fu guang chang
-  PinyinHelper.convertToPinyinString(str, separator: " ", format: PinyinFormat.WITHOUT_TONE);
+  String pinyin1 = PinyinHelper.getPinyin(str); //tian fu guang chang
+  String pinyin2 = PinyinHelper.getPinyin(str,
+      separator: " ", format: PinyinFormat.WITHOUT_TONE);
 
-  PinyinHelper.convertToPinyinStringWithoutException(str); //tian fu guang chang
-  PinyinHelper.convertToPinyinStringWithoutException(str, separator: " ", format: PinyinFormat.WITHOUT_TONE);
+  PinyinHelper.getPinyinE(str); //tian fu guang chang
+  PinyinHelper.getPinyinE(str,
+      separator: " ", format: PinyinFormat.WITHOUT_TONE);
+
+  print("shortpy: " + shortpy);
+  print("firstWord: " + firstWord);
+  print("pinyin1: " + pinyin1);
+  print("pinyin2: " + pinyin2);
 
   //添加用户自定义字典
   List<String> dict1 = ['耀=yào', '老=lǎo'];
@@ -23,6 +30,3 @@ void main() {
   List<String> dict3 = ['倆=俩', '們=们'];
   ChineseHelper.addChineseDict(dict3); //繁体字字典
 }
-
-
-

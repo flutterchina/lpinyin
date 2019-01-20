@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:lpinyin/src/dict_data.dart';
 
+/// Pinyin Resource.
 class PinyinResource {
   static Map<String, String> getPinyinResource() {
     return getResource(PINYIN_DICT);

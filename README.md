@@ -10,6 +10,13 @@ lpinyin是一个汉字转拼音的Dart package. 主要参考Java开源类库[jpi
 ⑤简繁体中文转换  
 ⑥支持添加用户自定义字典
 
+### Add dependency
+
+```yaml
+dependencies:
+  lpinyin: x.x.x  #latest version
+```
+
 ### v1.0.8 
 remove new keyword.
 
@@ -24,13 +31,6 @@ convertToPinyinStringWithoutException -> getPinyinE
 
 ##  Demo截图
 ![image](https://github.com/Sky24n/lpinyin/blob/master/screenshot/2018-08-17_13_13_09.gif)
-
-### Add dependency
-
-```yaml
-dependencies:
-  lpinyin: x.x.x  #latest version
-```
 
 ### Example
 

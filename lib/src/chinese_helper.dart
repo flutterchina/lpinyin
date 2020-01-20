@@ -3,7 +3,7 @@ import 'package:lpinyin/src/pinyin_resource.dart';
 /// Chinese Helper.
 class ChineseHelper {
   static final String chineseRegex = "[\\u4e00-\\u9fa5]";
-  static final RegExp chineseRegexp = new RegExp(chineseRegex);
+  static final RegExp chineseRegexp = RegExp(chineseRegex);
   static final Map<String, String> chineseMap =
       PinyinResource.getChineseResource();
 
@@ -97,7 +97,7 @@ class ChineseHelper {
 
   ///
   static String convertToSimplifiedChinese(String str) {
-    StringBuffer sb = new StringBuffer();
+    StringBuffer sb = StringBuffer();
     for (int i = 0, len = str.length; i < len; i++) {
       sb.write(convertCharToSimplifiedChinese(str[i]));
     }
@@ -114,7 +114,7 @@ class ChineseHelper {
 
   ///
   static String convertToTraditionalChinese(String str) {
-    StringBuffer sb = new StringBuffer();
+    StringBuffer sb = StringBuffer();
     for (int i = 0, len = str.length; i < len; i++) {
       sb.write(convertCharToTraditionalChinese(str[i]));
     }

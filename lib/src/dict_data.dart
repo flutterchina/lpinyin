@@ -1,4 +1,4 @@
-const List<String> PINYIN_DICT = const [
+List<String> PINYIN_DICT = [
   '耀=yào',
   '老=lǎo',
   '耂=lǎo',
@@ -20904,7 +20904,7 @@ const List<String> PINYIN_DICT = const [
   '翿=dào'
 ];
 
-const List<String> CHINESE_DICT = const [
+List<String> CHINESE_DICT = [
   '倀=伥',
   '瀅=滢',
   '瀆=渎',
@@ -23440,7 +23440,7 @@ const List<String> CHINESE_DICT = const [
   '濾=滤'
 ];
 
-const List<String> MULTI_PINYIN_DICT = const [
+List<String> MULTI_PINYIN_DICT = [
   '奇偶=jī,ǒu',
   '俯首帖耳=fǔ,shǒu,tiē,ěr',
   '委靡=wěi,mǐ',

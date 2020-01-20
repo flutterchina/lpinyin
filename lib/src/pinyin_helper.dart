@@ -43,7 +43,7 @@ class PinyinHelper {
 
   ///
   static String getShortPinyin(String str, {String defPinyin: '#'}) {
-    StringBuffer sb = new StringBuffer();
+    StringBuffer sb = StringBuffer();
     String pinyin =
         getPinyinE(str, separator: pinyinSeparator, defPinyin: defPinyin);
     List<String> list = pinyin.split(pinyinSeparator);
@@ -64,7 +64,7 @@ class PinyinHelper {
   ///
   static String getPinyin(String str,
       {String separator: " ", PinyinFormat format: PinyinFormat.WITHOUT_TONE}) {
-    StringBuffer sb = new StringBuffer();
+    StringBuffer sb = StringBuffer();
     str = ChineseHelper.convertToSimplifiedChinese(str);
     int strLen = str.length;
     int i = 0;
@@ -78,7 +78,7 @@ class PinyinHelper {
           if (pinyinArray.length > 0) {
             sb.write(pinyinArray[0]);
           } else {
-            throw new PinyinException("Can't convert to pinyin: " + _char);
+            throw PinyinException("Can't convert to pinyin: " + _char);
           }
         } else {
           sb.write(_char);
@@ -111,7 +111,7 @@ class PinyinHelper {
       {String separator: " ",
       String defPinyin: ' ',
       PinyinFormat format: PinyinFormat.WITHOUT_TONE}) {
-    StringBuffer sb = new StringBuffer();
+    StringBuffer sb = StringBuffer();
     str = ChineseHelper.convertToSimplifiedChinese(str);
     int strLen = str.length;
     int i = 0;
@@ -175,13 +175,13 @@ class PinyinHelper {
       String multi = multiPinyinMap[subStr];
       if (multi != null && multi.length > 0) {
         List<String> str = multi.split(pinyinSeparator);
-        StringBuffer sb = new StringBuffer();
+        StringBuffer sb = StringBuffer();
         str.forEach((value) {
           List<String> pinyin = formatPinyin(value, format);
           sb.write(pinyin[0]);
           sb.write(separator);
         });
-        return new MultiPinyin(word: subStr, pinyin: sb.toString());
+        return MultiPinyin(word: subStr, pinyin: sb.toString());
       }
     }
     return null;
@@ -200,7 +200,7 @@ class PinyinHelper {
     if ((pinyin != null) && ("null" != pinyin)) {
       return formatPinyin(pinyin, format);
     }
-    return new List();
+    return List();
   }
 
   /**
@@ -219,7 +219,7 @@ class PinyinHelper {
     } else if (format == PinyinFormat.WITHOUT_TONE) {
       return convertWithoutTone(pinyinStr);
     }
-    return new List();
+    return List();
   }
 
   /**
@@ -241,7 +241,7 @@ class PinyinHelper {
     // 将拼音中的ü替换为v
     pinyinArray = pinyinArrayStr.replaceAll("ü", "v").split(pinyinSeparator);
     // 去掉声调后的拼音可能存在重复，做去重处理
-    LinkedHashSet<String> pinyinSet = new LinkedHashSet<String>();
+    LinkedHashSet<String> pinyinSet = LinkedHashSet<String>();
     pinyinArray.forEach((value) {
       pinyinSet.add(value);
     });
@@ -333,7 +333,7 @@ class MultiPinyin {
 
   @override
   String toString() {
-    StringBuffer sb = new StringBuffer('{');
+    StringBuffer sb = StringBuffer('{');
     sb.write("\"word\":\"$word\"");
     sb.write(",\"pinyin\":\"$pinyin\"");
     sb.write('}');

@@ -1,3 +1,6 @@
+## 1.0.8
+* TODO: remove new keyword.
+
 ## 1.0.7
 
 * TODO: name change, convertToPinyinString -> getPinyin, convertToPinyinStringWithoutException -> getPinyinE. 

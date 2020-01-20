@@ -10,6 +10,9 @@ lpinyin是一个汉字转拼音的Dart package. 主要参考Java开源类库[jpi
 ⑤简繁体中文转换  
 ⑥支持添加用户自定义字典
 
+### v1.0.8 
+remove new keyword.
+
 ### v1.0.7 方法名改变
 convertToPinyinString -> getPinyin  
 convertToPinyinStringWithoutException -> getPinyinE

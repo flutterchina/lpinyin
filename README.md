@@ -14,7 +14,7 @@ lpinyin是一个汉字转拼音的Dart package. 主要参考Java开源类库[jpi
 
 ```yaml
 dependencies:
-  lpinyin: x.x.x  #latest version
+  lpinyin: ^1.0.9  #latest version
 ```
 
 ### v1.0.8 

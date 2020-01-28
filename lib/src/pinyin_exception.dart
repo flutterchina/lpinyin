@@ -5,7 +5,7 @@ class PinyinException implements Exception {
   PinyinException([this.message]);
 
   String toString() {
-    if (message == null) return "Exception";
-    return "Exception: $message";
+    if (message == null) return 'Exception';
+    return 'Exception: $message';
   }
 }

@@ -1,3 +1,6 @@
+## 1.0.9
+* TODO: Use = to separate a named parameter from its default value.
+
 ## 1.0.8
 * TODO: remove new keyword.
 

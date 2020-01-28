@@ -1,4 +1,4 @@
-List<String> PINYIN_DICT = [
+const List<String> pinyinDict = [
   '耀=yào',
   '老=lǎo',
   '耂=lǎo',
@@ -20904,7 +20904,7 @@ List<String> PINYIN_DICT = [
   '翿=dào'
 ];
 
-List<String> CHINESE_DICT = [
+const List<String> chineseDict = [
   '倀=伥',
   '瀅=滢',
   '瀆=渎',
@@ -23440,7 +23440,7 @@ List<String> CHINESE_DICT = [
   '濾=滤'
 ];
 
-List<String> MULTI_PINYIN_DICT = [
+const List<String> multiPinyinDict = [
   '奇偶=jī,ǒu',
   '俯首帖耳=fǔ,shǒu,tiē,ěr',
   '委靡=wěi,mǐ',

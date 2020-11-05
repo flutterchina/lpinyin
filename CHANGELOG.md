@@ -1,3 +1,6 @@
+## 1.1.0
+* TODO: fix getShortPinyin bugs.
+
 ## 1.0.9
 * TODO: Use = to separate a named parameter from its default value.
 

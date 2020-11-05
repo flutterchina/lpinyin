@@ -1,8 +1,6 @@
-# lpinyin (汉字转拼音Flutter版)
+# lpinyin (Flutter汉字转拼音)
 
-[![Pub](https://img.shields.io/pub/v/lpinyin.svg?style=flat-square)](https://pub.dartlang.org/packages/lpinyin)
-
-lpinyin是一个汉字转拼音的Dart package. 主要参考Java开源类库[jpinyin](https://github.com/SilenceDut/jpinyin).  
+lpinyin是一个汉字转拼音的Dart Package. 主要参考Java开源类库[jpinyin](https://github.com/SilenceDut/jpinyin).  
 ①准确、完善的字库  
 ②拼音转换速度快  
 ③支持多种拼音输出格式：带音标、不带音标、数字表示音标以及拼音首字母输出格式  
@@ -10,27 +8,12 @@ lpinyin是一个汉字转拼音的Dart package. 主要参考Java开源类库[jpi
 ⑤简繁体中文转换  
 ⑥支持添加用户自定义字典
 
-### Add dependency
+### Pub
 
 ```yaml
 dependencies:
-  lpinyin: ^1.0.9  #latest version
+  lpinyin: ^1.1.0  #latest version
 ```
-
-### v1.0.8 
-remove new keyword.
-
-### v1.0.7 方法名改变
-convertToPinyinString -> getPinyin  
-convertToPinyinStringWithoutException -> getPinyinE
-
-## Demo: [flutter_demos](https://github.com/Sky24n/flutter_demos).
-
-## Android扫码下载APK
-  ![](https://github.com/Sky24n/LDocuments/blob/master/AppImgs/flutter_demos/qrcode.png)
-
-##  Demo截图
-![image](https://github.com/Sky24n/lpinyin/blob/master/screenshot/2018-08-17_13_13_09.gif)
 
 ### Example
 
@@ -64,3 +47,12 @@ List<String> dict3 = ['倆=俩','們=们'];
 ChineseHelper.addChineseDict(dict3);//繁体字字典
 
 ```
+
+## Screenshots
+![](https://s1.ax1x.com/2020/11/05/B2fwQO.gif)
+
+## Changelog
+Please see the [Changelog](CHANGELOG.md) page to know what's recently changed.
+
+## App
+[Moss App](https://github.com/Sky24n/Moss)

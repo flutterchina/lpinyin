@@ -1,3 +1,6 @@
+## 1.1.1
+* TODO: fix analysis.
+
 ## 1.1.0
 * TODO: fix getShortPinyin bugs.
 

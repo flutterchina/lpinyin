@@ -198,7 +198,7 @@ class PinyinHelper {
     if ((pinyin != null) && ('null' != pinyin)) {
       return formatPinyin(pinyin, format);
     }
-    return List();
+    return [];
   }
 
   /// 将带声调的拼音格式化为相应格式的拼音
@@ -213,7 +213,7 @@ class PinyinHelper {
     } else if (format == PinyinFormat.WITHOUT_TONE) {
       return convertWithoutTone(pinyinStr);
     }
-    return List();
+    return [];
   }
 
   /// 将带声调格式的拼音转换为不带声调格式的拼音

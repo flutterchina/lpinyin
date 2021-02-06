@@ -22,7 +22,7 @@ class PinyinResource {
   /// get Resource.
   static Map<String, String> getResource(List<String> list) {
     Map<String, String> map = HashMap();
-    List<MapEntry<String, String>> mapEntryList = List();
+    List<MapEntry<String, String>> mapEntryList = [];
     for (int i = 0, length = list.length; i < length; i++) {
       List<String> tokens = list[i].trim().split('=');
       MapEntry<String, String> mapEntry = MapEntry(tokens[0], tokens[1]);

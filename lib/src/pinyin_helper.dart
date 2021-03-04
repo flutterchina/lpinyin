@@ -24,7 +24,7 @@ class PinyinHelper {
   /// @param str 需要转换的字符串
   /// @return 首字拼音 (成都 cheng)
   static String getFirstWordPinyin(String str) {
-    if (str == null || str.isEmpty) return '';
+    if (str.isEmpty) return '';
     String _pinyin = getPinyinE(str, separator: pinyinSeparator);
     return _pinyin.split(pinyinSeparator)[0];
   }
@@ -33,7 +33,7 @@ class PinyinHelper {
   /// @param str 需要转换的字符串
   /// @return 对应拼音的首字母 (成都 cd)
   static String getShortPinyin(String str) {
-    if (str == null || str.isEmpty) return '';
+    if (str.isEmpty) return '';
     StringBuffer sb = StringBuffer();
     StringBuffer temp = StringBuffer();
     for (int i = 0, len = str.length; i < len; i++) {
@@ -70,14 +70,14 @@ class PinyinHelper {
     String separator = ' ',
     PinyinFormat format = PinyinFormat.WITHOUT_TONE,
   }) {
-    if (str == null || str.isEmpty) return '';
+    if (str.isEmpty) return '';
     StringBuffer sb = StringBuffer();
     str = ChineseHelper.convertToSimplifiedChinese(str);
     int strLen = str.length;
     int i = 0;
     while (i < strLen) {
       String subStr = str.substring(i);
-      MultiPinyin node = convertToMultiPinyin(subStr, separator, format);
+      MultiPinyin? node = convertToMultiPinyin(subStr, separator, format);
       if (node == null) {
         String _char = str[i];
         if (ChineseHelper.isChinese(_char)) {
@@ -96,12 +96,13 @@ class PinyinHelper {
         i++;
       } else {
         sb.write(node.pinyin);
-        i += node.word.length;
+        i += node.word!.length;
       }
     }
-    return ((sb.toString().endsWith(separator) && separator != '')
-        ? sb.toString().substring(0, sb.toString().length - 1)
-        : sb.toString());
+    String res = sb.toString();
+    return ((res.endsWith(separator) && separator != '')
+        ? res.substring(0, res.length - 1)
+        : res);
   }
 
   /// 将字符串转换成相应格式的拼音 (不能转换的字拼音默认用' '替代 )
@@ -116,14 +117,14 @@ class PinyinHelper {
     String defPinyin = ' ',
     PinyinFormat format = PinyinFormat.WITHOUT_TONE,
   }) {
-    if (str == null || str.isEmpty) return '';
+    if (str.isEmpty) return '';
     StringBuffer sb = StringBuffer();
     str = ChineseHelper.convertToSimplifiedChinese(str);
     int strLen = str.length;
     int i = 0;
     while (i < strLen) {
       String subStr = str.substring(i);
-      MultiPinyin node = convertToMultiPinyin(subStr, separator, format);
+      MultiPinyin? node = convertToMultiPinyin(subStr, separator, format);
       if (node == null) {
         String _char = str[i];
         if (ChineseHelper.isChinese(_char)) {
@@ -146,12 +147,13 @@ class PinyinHelper {
         i++;
       } else {
         sb.write(node.pinyin);
-        i += node.word.length;
+        i += node.word!.length;
       }
     }
-    return ((sb.toString().endsWith(separator) && separator != "")
-        ? sb.toString().substring(0, sb.toString().length - 1)
-        : sb.toString());
+    String res = sb.toString();
+    return ((res.endsWith(separator) && separator != '')
+        ? res.substring(0, res.length - 1)
+        : res);
   }
 
   /// 获取多音字拼音
@@ -159,9 +161,9 @@ class PinyinHelper {
   /// @param separator 拼音分隔符
   /// @param format 拼音格式
   /// @return 多音字拼音
-  static MultiPinyin convertToMultiPinyin(
+  static MultiPinyin? convertToMultiPinyin(
       String str, String separator, PinyinFormat format) {
-    if (str == null || str.length < minMultiLength) return null;
+    if (str.length < minMultiLength) return null;
     if (maxMultiLength == 0) {
       List<String> keys = multiPinyinMap.keys.toList();
       for (int i = 0, length = keys.length; i < length; i++) {
@@ -174,7 +176,7 @@ class PinyinHelper {
         (end <= length && end <= maxMultiLength);
         end++) {
       String subStr = str.substring(0, end);
-      String multi = multiPinyinMap[subStr];
+      String? multi = multiPinyinMap[subStr];
       if (multi != null && multi.isNotEmpty) {
         List<String> str = multi.split(pinyinSeparator);
         StringBuffer sb = StringBuffer();
@@ -194,11 +196,8 @@ class PinyinHelper {
   /// @param format 拼音格式
   /// @return 汉字的拼音
   static List<String> convertToPinyinArray(String c, PinyinFormat format) {
-    String pinyin = pinyinMap[c];
-    if ((pinyin != null) && ('null' != pinyin)) {
-      return formatPinyin(pinyin, format);
-    }
-    return [];
+    String? pinyin = pinyinMap[c];
+    return pinyin == null ? [] : formatPinyin(pinyin, format);
   }
 
   /// 将带声调的拼音格式化为相应格式的拼音
@@ -304,8 +303,8 @@ class PinyinHelper {
 
 /// 多音字
 class MultiPinyin {
-  String word;
-  String pinyin;
+  String? word;
+  String? pinyin;
 
   MultiPinyin({this.word, this.pinyin});
 

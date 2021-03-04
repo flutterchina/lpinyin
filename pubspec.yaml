@@ -1,8 +1,7 @@
 name: lpinyin
 description: Chinese character conversion pinyin library.Accurate and complete Chinese character dictionary.Fast conversion.
-version: 1.1.1
-author: Sky24n <sky24no@gmail.com>
+version: 2.0.0
 homepage: https://github.com/flutterchina/lpinyin
 
 environment:
-  sdk: ">=1.19.0 <3.0.0"
+  sdk: ">=2.12.0-259.9.beta <3.0.0"

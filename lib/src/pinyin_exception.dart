@@ -1,11 +1,12 @@
 /// Pinyin Exception.
 class PinyinException implements Exception {
-  String message;
+  final dynamic message;
 
   PinyinException([this.message]);
 
   String toString() {
-    if (message == null) return 'Exception';
-    return 'Exception: $message';
+    Object? message = this.message;
+    if (message == null) return "Exception";
+    return "Exception: $message";
   }
 }

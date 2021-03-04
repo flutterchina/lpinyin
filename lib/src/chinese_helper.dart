@@ -36,11 +36,8 @@ class ChineseHelper {
   /// @param c 需要转换的繁体字
   /// @return 转换后的简体字
   static String convertCharToSimplifiedChinese(String c) {
-    String simplifiedChinese = chineseMap[c];
-    if (simplifiedChinese != null) {
-      return simplifiedChinese;
-    }
-    return c;
+    String? simplifiedChinese = chineseMap[c];
+    return simplifiedChinese ?? c;
   }
 
   /// 将单个简体字转换为繁体字

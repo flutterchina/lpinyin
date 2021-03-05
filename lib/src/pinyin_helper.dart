@@ -284,7 +284,7 @@ class PinyinHelper {
   /// @return 判断结果，是汉字返回true，否则返回false
   static bool hasMultiPinyin(String c) {
     List<String> pinyinArray = convertCharToPinyinArray(c);
-    if (pinyinArray != null && pinyinArray.isNotEmpty) {
+    if (pinyinArray.isNotEmpty) {
       return true;
     }
     return false;

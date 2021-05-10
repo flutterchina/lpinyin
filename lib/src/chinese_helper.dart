@@ -2,7 +2,7 @@ import 'package:lpinyin/src/pinyin_resource.dart';
 
 /// Chinese Helper.
 class ChineseHelper {
-  static final String chineseRegex = "[\\u4e00-\\u9fa5]";
+  static const String chineseRegex = "[\\u4e00-\\u9fa5]";
   static final RegExp chineseRegexp = RegExp(chineseRegex);
   static final Map<String, String> chineseMap =
       PinyinResource.getChineseResource();

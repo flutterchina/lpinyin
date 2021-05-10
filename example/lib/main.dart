@@ -1,4 +1,5 @@
 import 'package:lpinyin/lpinyin.dart';
+import 'package:lpinyin/src/chinese_helper.dart';
 
 void main() {
   String str = "天府广场";
@@ -21,6 +22,11 @@ void main() {
   print("firstWord: " + firstWord);
   print("pinyin1: " + pinyin1);
   print("pinyin2: " + pinyin2);
+
+  String name = "😃";
+  String pinyin = PinyinHelper.getPinyin(name, separator: '');
+  print(
+      "pinyin: $pinyin , length: ${name.length}, sub: ${name.substring(0)} , FirstWord: ${PinyinHelper.getFirstWordPinyin(name)} , ShortPinyin: ${PinyinHelper.getShortPinyin(name)} ");
 
   //添加用户自定义字典
   List<String> dict1 = ['耀=yào', '老=lǎo'];

@@ -8,14 +8,14 @@ lpinyin是一个汉字转拼音的Dart Package. 主要参考Java开源类库[jpi
 ⑤简繁体中文转换  
 ⑥支持添加用户自定义字典
 
-### Pub
+## Pub
 
 ```yaml
 dependencies:
-  lpinyin: ^2.0.0  #latest version
+  lpinyin: ^2.0.2  #latest version
 ```
 
-### Example
+## Example
 
 ``` dart
 
@@ -55,4 +55,9 @@ ChineseHelper.addChineseDict(dict3);//繁体字字典
 Please see the [Changelog](CHANGELOG.md) page to know what's recently changed.
 
 ## App
-[Moss App](https://github.com/Sky24n/Moss)
+[Moss](https://github.com/Sky24n/Moss)  
+A GitHub client app developed with Flutter, which supports Android iOS Web.  
+Web ：[Flutter Web](https://sky24n.github.io/Sky24n/moss).
+
+|![](https://z3.ax1x.com/2021/04/26/gp1hm6.jpg)|![](https://z3.ax1x.com/2021/04/26/gp1Tte.jpg)|![](https://z3.ax1x.com/2021/04/26/gp17fH.jpg)|
+|:---:|:---:|:---:|

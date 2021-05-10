@@ -1,3 +1,6 @@
+## 2.0.2
+* TODO: fix issues [#7](https://github.com/flutterchina/lpinyin/issues/7).
+
 ## 2.0.1
 * TODO: fix analysis.
 

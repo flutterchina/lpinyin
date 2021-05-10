@@ -12,11 +12,11 @@ class PinyinHelper {
       PinyinResource.getMultiPinyinResource();
 
   /// 拼音分隔符
-  static final String pinyinSeparator = ',';
+  static const String pinyinSeparator = ',';
 
   /// 所有带声调的拼音字母
-  static final String allMarkedVowel = 'āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ';
-  static final String allUnmarkedVowel = 'aeiouv';
+  static const String allMarkedVowel = 'āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ';
+  static const String allUnmarkedVowel = 'aeiouv';
   static int minMultiLength = 2;
   static int maxMultiLength = 0;
 
@@ -25,8 +25,8 @@ class PinyinHelper {
   /// @return 首字拼音 (成都 cheng)
   static String getFirstWordPinyin(String str) {
     if (str.isEmpty) return '';
-    String _pinyin = getPinyinE(str, separator: pinyinSeparator);
-    return _pinyin.split(pinyinSeparator)[0];
+    String _pinyin = getPinyin(str, separator: '');
+    return _pinyin.substring(0);
   }
 
   /// 获取字符串对应拼音的首字母
@@ -73,6 +73,7 @@ class PinyinHelper {
     if (str.isEmpty) return '';
     StringBuffer sb = StringBuffer();
     str = ChineseHelper.convertToSimplifiedChinese(str);
+
     int strLen = str.length;
     int i = 0;
     while (i < strLen) {
@@ -85,7 +86,7 @@ class PinyinHelper {
           if (pinyinArray.isNotEmpty) {
             sb.write(pinyinArray[0]);
           } else {
-            throw PinyinException("Can't convert to pinyin: " + _char);
+            throw PinyinException("Can't convert to pinyin: $_char");
           }
         } else {
           sb.write(_char);
@@ -113,7 +114,7 @@ class PinyinHelper {
   /// @return 字符串的拼音(成都 cheng du)
   static String getPinyinE(
     String str, {
-    String separator = " ",
+    String separator = ' ',
     String defPinyin = ' ',
     PinyinFormat format = PinyinFormat.WITHOUT_TONE,
   }) {
@@ -133,10 +134,8 @@ class PinyinHelper {
             sb.write(pinyinArray[0]);
           } else {
             sb.write(defPinyin);
-            print("### Can't convert to pinyin: " +
-                _char +
-                '   defPinyin: ' +
-                defPinyin);
+            print(
+                "### Can't convert to pinyin: $_char , defPinyin: $defPinyin");
           }
         } else {
           sb.write(_char);

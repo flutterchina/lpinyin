@@ -25,8 +25,8 @@ class PinyinHelper {
   /// @return 首字拼音 (成都 cheng)
   static String getFirstWordPinyin(String str) {
     if (str.isEmpty) return '';
-    String _pinyin = getPinyin(str, separator: '');
-    return _pinyin.substring(0);
+    String _pinyin = getPinyin(str, separator: pinyinSeparator);
+    return _pinyin.split(pinyinSeparator)[0];
   }
 
   /// 获取字符串对应拼音的首字母

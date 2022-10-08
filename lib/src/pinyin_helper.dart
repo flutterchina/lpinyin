@@ -298,6 +298,53 @@ class PinyinHelper {
   static void addMultiPinyinDict(List<String> list) {
     multiPinyinMap.addAll(PinyinResource.getResource(list));
   }
+
+  /// 将单个拼音分隔成声母和韵母
+  static List<String> splitPinyin(String pinyin) {
+    List<String> result = [];
+    String initial = '';
+    String finalPinyin = '';
+    for (int i = 0; i < pinyin.length; i++) {
+      String char = pinyin[i];
+      if (char == 'a' ||
+          char == "ǎ" ||
+          char == "á" ||
+          char == "à" ||
+          char == "ā" ||
+          char == "e" ||
+          char == "ě" ||
+          char == "é" ||
+          char == "è" ||
+          char == "ē" ||
+          char == "i" ||
+          char == "ǐ" ||
+          char == "í" ||
+          char == "ì" ||
+          char == "ī" ||
+          char == "o" ||
+          char == "ǒ" ||
+          char == "ó" ||
+          char == "ò" ||
+          char == "ō" ||
+          char == "u" ||
+          char == "ǔ" ||
+          char == "ú" ||
+          char == "ù" ||
+          char == "ū" ||
+          char == "ü" ||
+          char == "ǘ" ||
+          char == "ǚ" ||
+          char == "ǜ" ||
+          char == "ǖ") {
+        initial = pinyin.substring(0, i);
+        finalPinyin = pinyin.substring(i);
+        break;
+      }
+    }
+    result.add(initial);
+    result.add(finalPinyin);
+    return result;
+  }
 }
 
 /// 多音字

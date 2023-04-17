@@ -22,6 +22,25 @@ class ZhuyinHelper {
     "5": "˙",
   };
 
+  /// 将字符串转换成相应格式的注音
+  static String getZhuyin(
+    String str, {
+    String separator = ' ',
+  }) {
+    String pinyin = PinyinHelper.getPinyin(
+      str,
+      format: PinyinFormat.WITH_TONE_NUMBER,
+    );
+    List<String> pinyinList = pinyin.split(' ');
+    String zhuyin = '';
+    pinyinList.forEach((singlePinyin) {
+      zhuyin += _singlePinyinToZhuYin(singlePinyin) + ' ';
+    });
+    zhuyin = zhuyin.substring(0, zhuyin.length);
+    zhuyin = zhuyin.replaceAll(' ', separator);
+    return zhuyin;
+  }
+
   /// 單個拼音轉注音
   static String _singlePinyinToZhuYin(String pinyin) {
     String tone = '1';

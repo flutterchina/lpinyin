@@ -6,7 +6,8 @@ lpinyin是一个汉字转拼音的Dart Package. 主要参考Java开源类库[jpi
 ③支持多种拼音输出格式：带音标、不带音标、数字表示音标以及拼音首字母输出格式  
 ④支持常见多音字的识别，其中包括词组、成语、地名等  
 ⑤简繁体中文转换  
-⑥支持添加用户自定义字典
+⑥支持添加用户自定义字典  
+⑦支持漢字轉注音 參考自[python-zhuyin](https://github.com/rku1999/python-zhuyin)
 
 ## Pub
 

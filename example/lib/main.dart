@@ -23,7 +23,7 @@ void main() {
   print("pinyin2: " + pinyin2);
 
   String zhuyin1 = ZhuyinHelper.getZhuyin(str);
-  String zhuyin2 = ZhuyinHelper.getZhuyin(str,separator: "-");
+  String zhuyin2 = ZhuyinHelper.getZhuyin(str,separator: "-",format: PinyinFormat.WITH_TONE_NUMBER);
 
   print("zhuyin1: " + zhuyin1);
   print("zhuyin2: " + zhuyin2);

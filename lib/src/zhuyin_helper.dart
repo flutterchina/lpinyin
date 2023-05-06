@@ -26,6 +26,7 @@ class ZhuyinHelper {
   static String getZhuyin(
     String str, {
     String separator = ' ',
+    PinyinFormat format = PinyinFormat.WITH_TONE_MARK,
   }) {
     String pinyin = PinyinHelper.getPinyin(
       str,
@@ -34,7 +35,7 @@ class ZhuyinHelper {
     List<String> pinyinList = pinyin.split(' ');
     String zhuyin = '';
     pinyinList.forEach((singlePinyin) {
-      zhuyin += _singlePinyinToZhuYin(singlePinyin) + ' ';
+      zhuyin += _singlePinyinToZhuYin(singlePinyin, format) + ' ';
     });
     zhuyin = zhuyin.substring(0, zhuyin.length - 1);
     zhuyin = zhuyin.replaceAll(' ', separator);
@@ -43,7 +44,7 @@ class ZhuyinHelper {
   }
 
   /// 單個拼音轉注音
-  static String _singlePinyinToZhuYin(String pinyin) {
+  static String _singlePinyinToZhuYin(String pinyin, PinyinFormat format) {
     if (_isDigit(pinyin)) return pinyin;
     String tone = '1';
     pinyin = pinyin.replaceAll("v", "ü");
@@ -55,7 +56,7 @@ class ZhuyinHelper {
         break;
       }
     }
-    return _convert(pinyin, tone, true, false);
+    return _convert(pinyin, tone, true, false, format);
   }
 
   /// 單個注音轉拼音
@@ -80,6 +81,7 @@ class ZhuyinHelper {
     String tone,
     bool pinyinToZhuyin,
     bool uToV,
+    PinyinFormat format,
   ) {
     String result = "";
 
@@ -102,9 +104,18 @@ class ZhuyinHelper {
     }
 
     if (pinyinToZhuyin) {
-      result = tone != '5'
-          ? result + numberToToneMap[tone]!
-          : numberToToneMap[tone]! + result;
+      switch (format) {
+        case PinyinFormat.WITH_TONE_MARK:
+          result = tone != '5'
+              ? result + numberToToneMap[tone]!
+              : numberToToneMap[tone]! + result;
+          break;
+        case PinyinFormat.WITH_TONE_NUMBER:
+          result = result + tone;
+          break;
+        case PinyinFormat.WITHOUT_TONE:
+          break;
+      }
     } else {
       result = result + toneToNumberMap[tone]!;
     }

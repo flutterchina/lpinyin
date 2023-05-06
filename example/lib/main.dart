@@ -1,5 +1,4 @@
 import 'package:lpinyin/lpinyin.dart';
-import 'package:lpinyin/src/chinese_helper.dart';
 
 void main() {
   String str = "天府广场";
@@ -12,7 +11,7 @@ void main() {
 
   String pinyin1 = PinyinHelper.getPinyin(str); //tian fu guang chang
   String pinyin2 = PinyinHelper.getPinyin(str,
-      separator: " ", format: PinyinFormat.WITHOUT_TONE);
+      separator: "-", format: PinyinFormat.WITHOUT_TONE);
 
   PinyinHelper.getPinyinE(str); //tian fu guang chang
   PinyinHelper.getPinyinE(str,
@@ -22,6 +21,12 @@ void main() {
   print("firstWord: " + firstWord);
   print("pinyin1: " + pinyin1);
   print("pinyin2: " + pinyin2);
+
+  String zhuyin1 = ZhuyinHelper.getZhuyin(str);
+  String zhuyin2 = ZhuyinHelper.getZhuyin(str,separator: "-",format: PinyinFormat.WITH_TONE_NUMBER);
+
+  print("zhuyin1: " + zhuyin1);
+  print("zhuyin2: " + zhuyin2);
 
   String name = "😃";
   String pinyin = PinyinHelper.getPinyin(name, separator: '');
